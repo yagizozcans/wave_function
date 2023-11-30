@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: ff598fadbd76604419bd96dd44cae0db
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TilesNonSliced_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1e5c02648b77b4eb7df6e2af712cf4
+      internalID: 859004382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6087e9e0a05b94ca65093cea2df85b
+      internalID: 1549982408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96df445239a00f84090183539a13dec7
+      internalID: -1952996817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b70709fc0cc7b49b2a464646dfcc31
+      internalID: -1882336752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8072d5dd53d99945844da49344d4e98
+      internalID: 1521674852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc1e8035677aa045b805238c8d1384b
+      internalID: 284317139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf034a7ab28e7e44aeacd9feb62a377
+      internalID: -1748378030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c7208900426864798bf0beb9f2b959
+      internalID: 231450991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cf6094f1f039148940b2aa2c8c325c
+      internalID: 1042491270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd53b0e2859ab1459a16597589f83b6
+      internalID: -348564385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0c93b71247bdb409acb163a87f94b2
+      internalID: 624677037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNonSliced_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac2aca9c22b67042ab675647da9409f
+      internalID: -1350735718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TilesNonSliced_0: 859004382
+      TilesNonSliced_1: 1549982408
+      TilesNonSliced_10: 1033893205
+      TilesNonSliced_11: 635660889
+      TilesNonSliced_12: -1882336752
+      TilesNonSliced_13: 1521674852
+      TilesNonSliced_14: 284317139
+      TilesNonSliced_15: 266920069
+      TilesNonSliced_16: 606912879
+      TilesNonSliced_17: -602924521
+      TilesNonSliced_18: -940093027
+      TilesNonSliced_19: 136768626
+      TilesNonSliced_2: -1952996817
+      TilesNonSliced_20: -1976802816
+      TilesNonSliced_21: 340496136
+      TilesNonSliced_22: 841553583
+      TilesNonSliced_23: -169651565
+      TilesNonSliced_24: -1748378030
+      TilesNonSliced_25: 231450991
+      TilesNonSliced_26: 1042491270
+      TilesNonSliced_27: -718502222
+      TilesNonSliced_28: -1740685141
+      TilesNonSliced_29: 361036381
+      TilesNonSliced_3: -348564385
+      TilesNonSliced_30: 329706518
+      TilesNonSliced_31: 1932027757
+      TilesNonSliced_32: 1928225473
+      TilesNonSliced_33: 1168394430
+      TilesNonSliced_34: 1990317269
+      TilesNonSliced_35: -1098189780
+      TilesNonSliced_36: 1578537149
+      TilesNonSliced_37: 471551058
+      TilesNonSliced_38: 1585470478
+      TilesNonSliced_39: 19399959
+      TilesNonSliced_4: 624677037
+      TilesNonSliced_40: -1715806925
+      TilesNonSliced_41: 607323009
+      TilesNonSliced_42: -1876350880
+      TilesNonSliced_43: 345253489
+      TilesNonSliced_44: -1544856889
+      TilesNonSliced_45: 1282804528
+      TilesNonSliced_46: -1148424361
+      TilesNonSliced_47: 1406595009
+      TilesNonSliced_48: -112069374
+      TilesNonSliced_49: 976736487
+      TilesNonSliced_5: -1350735718
+      TilesNonSliced_50: 1258796368
+      TilesNonSliced_51: -602705178
+      TilesNonSliced_52: 1933670038
+      TilesNonSliced_53: 2068266768
+      TilesNonSliced_54: -1525251204
+      TilesNonSliced_55: -479953774
+      TilesNonSliced_56: 1558516813
+      TilesNonSliced_57: -650829869
+      TilesNonSliced_58: 593527113
+      TilesNonSliced_59: 464324368
+      TilesNonSliced_6: 879136540
+      TilesNonSliced_60: 624510986
+      TilesNonSliced_61: 2090258856
+      TilesNonSliced_62: 985200212
+      TilesNonSliced_63: -375718437
+      TilesNonSliced_64: 1383110663
+      TilesNonSliced_65: 116760235
+      TilesNonSliced_66: 602338721
+      TilesNonSliced_67: 854880757
+      TilesNonSliced_68: -2123874761
+      TilesNonSliced_69: -205354224
+      TilesNonSliced_7: 1274474680
+      TilesNonSliced_70: -1626657123
+      TilesNonSliced_71: 327005275
+      TilesNonSliced_72: 1125624867
+      TilesNonSliced_73: 1657398325
+      TilesNonSliced_74: -1899130574
+      TilesNonSliced_75: -1720728334
+      TilesNonSliced_76: -432765030
+      TilesNonSliced_77: -1184421247
+      TilesNonSliced_78: 1606843336
+      TilesNonSliced_79: 502273285
+      TilesNonSliced_8: -905078990
+      TilesNonSliced_80: 31473681
+      TilesNonSliced_81: 279726399
+      TilesNonSliced_82: 1210268755
+      TilesNonSliced_83: 1791615713
+      TilesNonSliced_84: 271316608
+      TilesNonSliced_9: -1981450356
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

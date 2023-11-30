@@ -1,0 +1,15 @@
+{
+    "tiles": [
+        {
+            "tileSpritePath": "spritepath",
+            "sockets": [
+                {
+                    "posX": 1,
+                    "negX": 1,
+                    "posY": 1,
+                    "negY": 1
+                }
+            ]
+        }
+    ]
+}
