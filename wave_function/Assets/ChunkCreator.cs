@@ -25,10 +25,10 @@ public class ChunkCreator : MonoBehaviour
     [System.Serializable]
     public class Sockets
     {
-        public int posX;
-        public int negX;
-        public int posY;
-        public int negY;
+        public int[] posX;
+        public int[] negX;
+        public int[] posY;
+        public int[] negY;
     }
 
     [System.Serializable]
@@ -146,7 +146,8 @@ public class ChunkCreator : MonoBehaviour
             List<Tiles> equalTiles = new List<Tiles>();
             for (int i = 0; i < tileCount; i++)
             {
-                if (superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i].sockets.posX == data.tile.sockets.negX)
+                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i].sockets.posX, data.tile.sockets.negX);
+                if (arraysEqual)
                 {
                     equalTiles.Add(superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i]);
                 }
@@ -160,10 +161,12 @@ public class ChunkCreator : MonoBehaviour
             List<Tiles> equalTiles = new List<Tiles>();
             for (int i = 0; i < tileCount; i++)
             {
-                if (superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i].sockets.negX == data.tile.sockets.posX)
+                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i].sockets.negX, data.tile.sockets.posX);
+                if(arraysEqual)
                 {
                     equalTiles.Add(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData>().currentTiles[i]);
                 }
+
             }
             int NxN = CalculateNxN(equalTiles.Count);
             RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x + 1][(int)data.pos.y], superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y], NxN, equalTiles);
@@ -174,7 +177,8 @@ public class ChunkCreator : MonoBehaviour
             List<Tiles> equalTiles = new List<Tiles>();
             for (int i = 0; i < tileCount; i++)
             {
-                if (superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData>().currentTiles[i].sockets.posY == data.tile.sockets.negY)
+                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData>().currentTiles[i].sockets.posY, data.tile.sockets.negY);
+                if (arraysEqual)
                 {
                     equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData>().currentTiles[i]);
                 }
@@ -188,7 +192,8 @@ public class ChunkCreator : MonoBehaviour
             List<Tiles> equalTiles = new List<Tiles>();
             for (int i = 0; i < tileCount; i++)
             {
-                if (superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData>().currentTiles[i].sockets.negY == data.tile.sockets.posY)
+                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData>().currentTiles[i].sockets.negY, data.tile.sockets.posY);
+                if (arraysEqual)
                 {
                     equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData>().currentTiles[i]);
                 }
@@ -220,5 +225,23 @@ public class ChunkCreator : MonoBehaviour
             NxN++;
         }
         return NxN;
+    }
+
+    public static bool ArrayEquals<T>(T[] a, T[] b)
+    {
+        if (a.Length != b.Length)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (!a[i].Equals(b[i]))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

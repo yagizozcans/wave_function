@@ -156,73 +156,73 @@ MonoBehaviour:
   - tileName: Left Up Corner Grass
     tileSprite: {fileID: 859004382, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 5
-      negX: 3
-      posY: 3
-      negY: 5
+      posX: 010000000100000002000000
+      negX: 010000000100000001000000
+      posY: 010000000100000001000000
+      negY: 010000000200000002000000
   - tileName: Middle Grass
     tileSprite: {fileID: 1549982408, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 6
-      negX: 6
-      posY: 3
-      negY: 1
+      posX: 010000000100000002000000
+      negX: 010000000100000002000000
+      posY: 010000000100000001000000
+      negY: 020000000200000002000000
   - tileName: Right Up Corner Grass
     tileSprite: {fileID: -1952996817, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 3
-      negX: 6
-      posY: 3
-      negY: 4
+      posX: 010000000100000001000000
+      negX: 010000000100000002000000
+      posY: 010000000100000001000000
+      negY: 010000000200000002000000
   - tileName: Dirt Left Middle
     tileSprite: {fileID: -1882336752, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 1
-      negX: 3
-      posY: 5
-      negY: 5
+      posX: 020000000200000002000000
+      negX: 010000000100000001000000
+      posY: 010000000200000002000000
+      negY: 010000000200000002000000
   - tileName: Dirt Middle
     tileSprite: {fileID: 1521674852, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 1
-      negX: 1
-      posY: 1
-      negY: 1
+      posX: 020000000200000002000000
+      negX: 020000000200000002000000
+      posY: 020000000200000002000000
+      negY: 020000000200000002000000
   - tileName: Dirt Right Middle
     tileSprite: {fileID: 284317139, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 3
-      negX: 1
-      posY: 4
-      negY: 4
+      posX: 010000000100000001000000
+      negX: 020000000200000002000000
+      posY: 010000000200000002000000
+      negY: 010000000200000002000000
   - tileName: Dirt Left Corner
     tileSprite: {fileID: -1748378030, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 0
-      negX: 3
-      posY: 5
-      negY: 3
+      posX: 020000000300000002000000
+      negX: 010000000100000001000000
+      posY: 010000000200000002000000
+      negY: 010000000100000001000000
   - tileName: Dirt Middle Corner
     tileSprite: {fileID: 231450991, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 0
-      negX: 0
-      posY: 1
-      negY: 3
+      posX: 020000000300000002000000
+      negX: 020000000300000002000000
+      posY: 020000000200000002000000
+      negY: 010000000100000001000000
   - tileName: Dirt Right Corner
     tileSprite: {fileID: 1042491270, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 3
-      negX: 0
-      posY: 4
-      negY: 3
+      posX: 010000000100000001000000
+      negX: 020000000300000002000000
+      posY: 010000000200000002000000
+      negY: 010000000100000001000000
   - tileName: Air
     tileSprite: {fileID: -1350735718, guid: ff598fadbd76604419bd96dd44cae0db, type: 3}
     sockets:
-      posX: 3
-      negX: 3
-      posY: 3
-      negY: 3
+      posX: 010000000100000001000000
+      negX: 010000000100000001000000
+      posY: 010000000100000001000000
+      negY: 010000000100000001000000
   gridSize: 4
   canvas: {fileID: 1549688367}
 --- !u!4 &76281771
