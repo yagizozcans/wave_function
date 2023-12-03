@@ -63,7 +63,8 @@ public class ChunkCreator : MonoBehaviour
                 GameObject superPositionObj = new GameObject();
                 superPositionObj.AddComponent<SpriteRenderer>();
                 superPositionObj.transform.position = new Vector3(i * Camera.main.orthographicSize / gridSize*2 + Camera.main.orthographicSize / gridSize, j * Camera.main.orthographicSize/gridSize*2 + Camera.main.orthographicSize / gridSize, 0)+
-                    new Vector3(-Camera.main.orthographicSize,-Camera.main.orthographicSize,0);
+                    new Vector3(-Camera.main.orthographicSize,-Camera.main.orthographicSize,0) + 
+                    new Vector3(Camera.main.orthographicSize / 3,0,0);
                 superPositionObj.AddComponent<superPositionsData>();
                 superPositionObj.GetComponent<superPositionsData>().pos = new Vector2(i,j);
                 superPositionObj.GetComponent<superPositionsData>().tile = null;

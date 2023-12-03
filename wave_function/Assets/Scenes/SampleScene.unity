@@ -202,7 +202,14 @@ MonoBehaviour:
       negX: 020000000200000002000000
       posY: 020000000200000002000000
       negY: 020000000200000002000000
-  gridSize: 16
+  - tileName: Air2
+    tileSprite: {fileID: 21300000, guid: 16eb449ea9090dc40a3c9c3fdf098ace, type: 3}
+    sockets:
+      posX: 020000000200000002000000
+      negX: 020000000200000002000000
+      posY: 020000000200000002000000
+      negY: 020000000200000002000000
+  gridSize: 4
   canvas: {fileID: 1549688367}
   value: {fileID: 2122029374}
 --- !u!4 &76281771
@@ -722,7 +729,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1440, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -965,10 +972,10 @@ RectTransform:
   - {fileID: 2043072160}
   m_Father: {fileID: 1549688371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -798.09, y: 445.59}
-  m_SizeDelta: {x: 323.82, y: 190.4}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 198.04999, y: 8}
+  m_SizeDelta: {x: 400, y: 190.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715420995
 MonoBehaviour:
