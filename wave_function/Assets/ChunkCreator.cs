@@ -16,6 +16,10 @@ public class ChunkCreator : MonoBehaviour
 
     public GameObject canvas;
 
+    bool isQuickSolved = false;
+
+    public InputField value;
+
     [System.Serializable]
     public class Tiles
     {
@@ -250,11 +254,29 @@ public class ChunkCreator : MonoBehaviour
 
     public void QuickSolve()
     {
+        if(isQuickSolved)
+        {
+            SetGridSize();
+        }
         List<GameObject> openSuperPositionObjs = new List<GameObject>();
+        List<GameObject> startList = new List<GameObject>();
         List<GameObject> closedSuperPositionObjs = new List<GameObject>();
-        openSuperPositionObjs.Add(superPositionObjs[Random.Range(0, gridSize)][Random.Range(0, gridSize)]);
-        int i = 0;
+        Vector2Int randomSuperObjValue = new Vector2Int();
         int lowestEntropy = allTiles.Length + 1;
+        for (int i = 0; i < gridSize; i++)
+        {
+            for (int j = 0; j < gridSize; j++)
+            {
+                if(lowestEntropy > superPositionObjs[i][j].GetComponent<superPositionsData>().currentTiles.Count && superPositionObjs[i][j].GetComponent<superPositionsData>().tile == null)
+                {
+                    lowestEntropy = superPositionObjs[i][j].GetComponent<superPositionsData>().currentTiles.Count;
+                    randomSuperObjValue = new Vector2Int(i, j);
+                }
+            }
+        }
+
+        openSuperPositionObjs.Add(superPositionObjs[randomSuperObjValue.x][randomSuperObjValue.y]);
+        int k = 0;
         while (openSuperPositionObjs.Count != 0)
         {
             lowestEntropy = allTiles.Length + 1;
@@ -310,20 +332,19 @@ public class ChunkCreator : MonoBehaviour
                     openSuperPositionObjs.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1]);
                 }
             }
-            i++;
-            if(i > 1000)
+            k++;
+            if(k > 1000)
             {
                 break;
             }
         }
+        if(!isQuickSolved)
+        {
+            isQuickSolved = true;
+        }
     }
 
-    public void loadScene(int loadScene)
-    {
-        SceneManager.LoadScene(loadScene);
-    }
-
-    public void SetGridSize(InputField value)
+    public void SetGridSize()
     {
         if(value.text != null)
         {
@@ -333,6 +354,7 @@ public class ChunkCreator : MonoBehaviour
             {
                 Destroy(obj);
             }
+            isQuickSolved = false;
             CreateSuperPositions();
         }
     }
