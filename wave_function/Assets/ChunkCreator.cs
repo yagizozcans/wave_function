@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class ChunkCreator : MonoBehaviour
 {
-    public Tiles[] allTiles;
+    [SerializeField]
+    public List<Tiles> allTiles;
 
     public int gridSize;
 
@@ -20,11 +21,13 @@ public class ChunkCreator : MonoBehaviour
 
     public InputField value;
 
+    public Slider speedValue;
+
     [System.Serializable]
     public class Tiles
     {
-        public string tileName;
         public Sprite tileSprite;
+        public int rotation;
         public Sockets sockets;
     }
     [System.Serializable]
@@ -53,7 +56,7 @@ public class ChunkCreator : MonoBehaviour
     {
         superPositionObjs = new GameObject[gridSize][];
         superPositionUIObjs = new GameObject[gridSize][];
-        int NxN = CalculateNxN(allTiles.Length);
+        int NxN = CalculateNxN(allTiles.Count);
         for(int i = 0; i < gridSize; i++)
         {
             superPositionObjs[i] = new GameObject[gridSize];
@@ -222,7 +225,9 @@ public class ChunkCreator : MonoBehaviour
             RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x][(int)data.pos.y + 1], superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1], NxN, superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData>().currentTiles);
         }*/
         superPositionObj.GetComponent<SpriteRenderer>().sprite = superPositionObj.GetComponent<superPositionsData>().tile.tileSprite;
-        superPositionObj.transform.localScale =  Vector2.one * 64 / gridSize;
+        //superPositionObj.transform.localScale =  Vector2.one * 64 / gridSize;
+        superPositionObj.transform.localScale =  64f * Vector2.one / gridSize;
+        superPositionObj.transform.rotation = new Quaternion(superPositionObj.transform.rotation.x, superPositionObj.transform.rotation.y, 90f * superPositionObj.GetComponent<superPositionsData>().tile.rotation, superPositionObj.transform.rotation.w);
         superPositionUIObjs[(int)data.pos.x][(int)data.pos.y].SetActive(false);
     }
     public int CalculateNxN(int length)
@@ -253,7 +258,7 @@ public class ChunkCreator : MonoBehaviour
         return true;
     }
 
-    public void QuickSolve()
+    public IEnumerator QuickSolve()
     {
         if(isQuickSolved)
         {
@@ -263,7 +268,7 @@ public class ChunkCreator : MonoBehaviour
         List<GameObject> startList = new List<GameObject>();
         List<GameObject> closedSuperPositionObjs = new List<GameObject>();
         Vector2Int randomSuperObjValue = new Vector2Int();
-        int lowestEntropy = allTiles.Length + 1;
+        int lowestEntropy = allTiles.Count + 1;
         for (int i = 0; i < gridSize; i++)
         {
             for (int j = 0; j < gridSize; j++)
@@ -280,7 +285,7 @@ public class ChunkCreator : MonoBehaviour
         int k = 0;
         while (openSuperPositionObjs.Count != 0)
         {
-            lowestEntropy = allTiles.Length + 1;
+            lowestEntropy = allTiles.Count + 1;
             GameObject currentSuperObj = null;
             List<GameObject> equalEntropies = new List<GameObject>();
             foreach (GameObject superPositionObjInOpen in openSuperPositionObjs)
@@ -338,11 +343,17 @@ public class ChunkCreator : MonoBehaviour
             {
                 break;
             }
+            yield return new WaitForSeconds(1/Mathf.Clamp(speedValue.value,0.01f,1f)/100);
         }
         if(!isQuickSolved)
         {
             isQuickSolved = true;
         }
+    }
+
+    public void QuickSolveButton()
+    {
+        StartCoroutine(QuickSolve());
     }
 
     public void SetGridSize()
