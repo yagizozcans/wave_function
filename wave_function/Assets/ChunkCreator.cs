@@ -23,6 +23,8 @@ public class ChunkCreator : MonoBehaviour
 
     public Slider speedValue;
 
+    GameObject lastTile;
+
     [System.Serializable]
     public class Tiles
     {
@@ -265,7 +267,6 @@ public class ChunkCreator : MonoBehaviour
             SetGridSize();
         }
         List<GameObject> openSuperPositionObjs = new List<GameObject>();
-        List<GameObject> startList = new List<GameObject>();
         List<GameObject> closedSuperPositionObjs = new List<GameObject>();
         Vector2Int randomSuperObjValue = new Vector2Int();
         int lowestEntropy = allTiles.Count + 1;
@@ -290,10 +291,6 @@ public class ChunkCreator : MonoBehaviour
             List<GameObject> equalEntropies = new List<GameObject>();
             foreach (GameObject superPositionObjInOpen in openSuperPositionObjs)
             {
-                if (superPositionObjInOpen.GetComponent<superPositionsData>().currentTiles.Count == lowestEntropy)
-                {
-                    equalEntropies.Add(superPositionObjInOpen);
-                }
                 if (superPositionObjInOpen.GetComponent<superPositionsData>().currentTiles.Count < lowestEntropy)
                 {
                     currentSuperObj = superPositionObjInOpen;
@@ -306,7 +303,8 @@ public class ChunkCreator : MonoBehaviour
                 currentSuperObj = equalEntropies[Random.Range(0,equalEntropies.Count)];
             }
             superPositionsData data = currentSuperObj.GetComponent<superPositionsData>();
-            data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+
+
             CheckSuperPositionNeighbours(currentSuperObj);
             closedSuperPositionObjs.Add(currentSuperObj);
             openSuperPositionObjs.Remove(currentSuperObj);
@@ -338,6 +336,7 @@ public class ChunkCreator : MonoBehaviour
                     openSuperPositionObjs.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1]);
                 }
             }
+            lastTile = currentSuperObj;
             k++;
             if(k > 1000)
             {
