@@ -549,65 +549,65 @@ public class WaveFunctionCollapse : MonoBehaviour
                         equalTiles.Add(superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[i]);
                     }
                 }
-                //int NxN = CalculateNxN(equalTiles.Count);
                 superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles = equalTiles;
-                //RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x - 1][(int)data.pos.y],superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y], NxN, equalTiles);
             }
         }
-        if (data.pos.x + 1 < superPositionObjs.Length && superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().tile == null)
+        if (data.pos.x + 1 < superPositionObjs.Length)
         {
-            int tileCount = superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles.Count;
-            List<Tiles1> equalTiles = new List<Tiles1>();
-            for (int i = 0; i < tileCount; i++)
+            if(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().tile == null)
             {
-                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[i].sockets.negX, data.tile.sockets.posX);
-                if (arraysEqual)
+                int tileCount = superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles.Count;
+                List<Tiles1> equalTiles = new List<Tiles1>();
+                for (int i = 0; i < tileCount; i++)
                 {
-                    equalTiles.Add(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[i]);
+                    bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[i].sockets.negX, data.tile.sockets.posX);
+                    if (arraysEqual)
+                    {
+                        equalTiles.Add(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[i]);
+                    }
                 }
+                superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles = equalTiles;
             }
-            //int NxN = CalculateNxN(equalTiles.Count);
-            superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles = equalTiles;
-            //RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x + 1][(int)data.pos.y], superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y], NxN, equalTiles);
         }
-        if (data.pos.y - 1 >= 0 && superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().tile == null)
+        if (data.pos.y - 1 >= 0)
         {
-            int tileCount = superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles.Count;
-            List<Tiles1> equalTiles = new List<Tiles1>();
-            for (int i = 0; i < tileCount; i++)
+            if(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().tile == null)
             {
-                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles[i].sockets.posY, data.tile.sockets.negY);
-                if (arraysEqual)
+                int tileCount = superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles.Count;
+                List<Tiles1> equalTiles = new List<Tiles1>();
+                for (int i = 0; i < tileCount; i++)
                 {
-                    equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles[i]);
+                    bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles[i].sockets.posY, data.tile.sockets.negY);
+                    if (arraysEqual)
+                    {
+                        equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles[i]);
+                    }
                 }
+                superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles = equalTiles;
             }
-            //int NxN = CalculateNxN(equalTiles.Count);
-            superPositionObjs[(int)data.pos.x][(int)data.pos.y - 1].GetComponent<superPositionsData1>().currentTiles = equalTiles;
-            //RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x][(int)data.pos.y-1], superPositionObjs[(int)data.pos.x][(int)data.pos.y-1], NxN, equalTiles);
         }
-        if (data.pos.y + 1 < superPositionObjs.Length && superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().tile == null)
+        if (data.pos.y + 1 < superPositionObjs.Length)
         {
-            int tileCount = superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles.Count;
-            List<Tiles1> equalTiles = new List<Tiles1>();
-            for (int i = 0; i < tileCount; i++)
+            if (superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().tile == null)
             {
-                bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles[i].sockets.negY, data.tile.sockets.posY);
-                if (arraysEqual)
+                int tileCount = superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles.Count;
+                List<Tiles1> equalTiles = new List<Tiles1>();
+                for (int i = 0; i < tileCount; i++)
                 {
-                    equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles[i]);
+                    bool arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles[i].sockets.negY, data.tile.sockets.posY);
+                    if (arraysEqual)
+                    {
+                        equalTiles.Add(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles[i]);
+                    }
                 }
+                superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles = equalTiles;
             }
-            //int NxN = CalculateNxN(equalTiles.Count);
-            superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles = equalTiles;
-            //RearrangeSuperPositionUI(superPositionUIObjs[(int)data.pos.x][(int)data.pos.y + 1], superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1], NxN, equalTiles);
         }
 
         superPositionObj.GetComponent<SpriteRenderer>().sprite = superPositionObj.GetComponent<superPositionsData1>().tile.tileSprite;
         //superPositionObj.transform.localScale =  Vector2.one * 64 / gridSize;
-        superPositionObj.transform.localScale = 17.85f * Vector2.one / gridSize;
+        superPositionObj.transform.localScale = 17.87f * Vector2.one / gridSize;
         superPositionObj.transform.Rotate(new Vector3(0, 0, -90 * superPositionObj.GetComponent<superPositionsData1>().tile.rotation));
-        //superPositionUIObjs[(int)data.pos.x][(int)data.pos.y].SetActive(false);
     }
     public int CalculateNxN(int length)
     {
@@ -628,7 +628,7 @@ public class WaveFunctionCollapse : MonoBehaviour
 
         for (int i = 0; i < a.Length; i++)
         {
-            if (!a[i].Equals(b[i]))
+            if (!a[Mathf.Abs(i-2)].Equals(b[i]))
             {
                 return false;
             }
@@ -646,20 +646,8 @@ public class WaveFunctionCollapse : MonoBehaviour
         List<GameObject> openSuperPositionObjs = new List<GameObject>();
         List<GameObject> startList = new List<GameObject>();
         List<GameObject> closedSuperPositionObjs = new List<GameObject>();
-        Vector2Int randomSuperObjValue = new Vector2Int();
+        Vector2Int randomSuperObjValue = new Vector2Int(Random.Range(0,superPositionObjs[0].Length) ,Random.Range(0, superPositionObjs[0].Length));
         int lowestEntropy = allTiles.Count + 1;
-        for (int i = 0; i < gridSize; i++)
-        {
-            for (int j = 0; j < gridSize; j++)
-            {
-                if (lowestEntropy > superPositionObjs[i][j].GetComponent<superPositionsData1>().currentTiles.Count && superPositionObjs[i][j].GetComponent<superPositionsData1>().tile == null)
-                {
-                    lowestEntropy = superPositionObjs[i][j].GetComponent<superPositionsData1>().currentTiles.Count;
-                    randomSuperObjValue = new Vector2Int(i, j);
-                }
-            }
-        }
-
         openSuperPositionObjs.Add(superPositionObjs[randomSuperObjValue.x][randomSuperObjValue.y]);
         while (openSuperPositionObjs.Count != 0)
         {
@@ -668,10 +656,6 @@ public class WaveFunctionCollapse : MonoBehaviour
             List<GameObject> equalEntropies = new List<GameObject>();
             foreach (GameObject superPositionObjInOpen in openSuperPositionObjs)
             {
-                if (superPositionObjInOpen.GetComponent<superPositionsData1>().currentTiles.Count == lowestEntropy)
-                {
-                    equalEntropies.Add(superPositionObjInOpen);
-                }
                 if (superPositionObjInOpen.GetComponent<superPositionsData1>().currentTiles.Count < lowestEntropy)
                 {
                     currentSuperObj = superPositionObjInOpen;
@@ -683,8 +667,18 @@ public class WaveFunctionCollapse : MonoBehaviour
             {
                 currentSuperObj = equalEntropies[Random.Range(0, equalEntropies.Count)];
             }
+            if(currentSuperObj.GetComponent<superPositionsData1>().currentTiles.Count != 0)
+            {
+                currentSuperObj.GetComponent<superPositionsData1>().tile = currentSuperObj.GetComponent<superPositionsData1>().currentTiles[Random.Range(0, currentSuperObj.GetComponent<superPositionsData1>().currentTiles.Count)];
+            }
+            else
+            {
+                lastSuperObj.GetComponent<superPositionsData1>().currentTiles.Remove(lastSuperObj.GetComponent<superPositionsData1>().tile);
+                lastSuperObj.GetComponent<superPositionsData1>().tile = null;
+                continue;
+            }
             superPositionsData1 data = currentSuperObj.GetComponent<superPositionsData1>();
-            while (true)
+            /*while (true)
             {
                 if (data.currentTiles.Count == 0)
                 {
@@ -703,6 +697,28 @@ public class WaveFunctionCollapse : MonoBehaviour
                             continue;
                         }
                     }
+                    else
+                    {
+                        bool arraysEqual = false;
+                        for (int k = 0; k < superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles.Count; k++)
+                        {
+                            arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x - 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[k].sockets.posX, data.tile.sockets.negX);
+                            if (arraysEqual)
+                            {
+                                Debug.Log("sa");
+                                break;
+                            }
+                        }
+                        if(!arraysEqual)
+                        {
+                                data.currentTiles.Remove(data.tile);
+                            if(data.currentTiles.Count != 0)
+                            {
+                                data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+                            }
+                            continue;
+                        }
+                    }
                 }
                 if (data.pos.x + 1 < superPositionObjs.Length)
                 {
@@ -713,6 +729,27 @@ public class WaveFunctionCollapse : MonoBehaviour
                         {
                             data.currentTiles.Remove(data.tile);
                             data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        bool arraysEqual = false;
+                        for (int k = 0; k < superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles.Count; k++)
+                        {
+                            arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x + 1][(int)data.pos.y].GetComponent<superPositionsData1>().currentTiles[k].sockets.negX, data.tile.sockets.posX);
+                            if (arraysEqual)
+                            {
+                                break;
+                            }
+                        }
+                        if(!arraysEqual)
+                        {
+                            data.currentTiles.Remove(data.tile);
+                            if (data.currentTiles.Count != 0)
+                            {
+                                data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+                            }
                             continue;
                         }
                     }
@@ -729,6 +766,27 @@ public class WaveFunctionCollapse : MonoBehaviour
                             continue;
                         }
                     }
+                    else
+                    {
+                        bool arraysEqual = false;
+                        for (int k = 0; k < superPositionObjs[(int)data.pos.x][(int)data.pos.y-1].GetComponent<superPositionsData1>().currentTiles.Count; k++)
+                        {
+                            arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y-1].GetComponent<superPositionsData1>().currentTiles[k].sockets.posY, data.tile.sockets.negY);
+                            if (arraysEqual)
+                            {
+                                break;
+                            }
+                        }
+                        if(!arraysEqual)
+                        {
+                                data.currentTiles.Remove(data.tile);
+                            if(data.currentTiles.Count != 0)
+                            {
+                                data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+                            }
+                            continue;
+                        }
+                    }
                 }
                 if (data.pos.y + 1 < superPositionObjs.Length)
                 {
@@ -742,9 +800,31 @@ public class WaveFunctionCollapse : MonoBehaviour
                             continue;
                         }
                     }
+                    else
+                    {
+                        bool arraysEqual = false;
+                        for (int k = 0; k < superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles.Count; k++)
+                        {
+                            arraysEqual = ArrayEquals<int>(superPositionObjs[(int)data.pos.x][(int)data.pos.y + 1].GetComponent<superPositionsData1>().currentTiles[k].sockets.negY, data.tile.sockets.posY);
+                            if (arraysEqual)
+                            {
+                                break;
+                            }
+                        }
+                        if(!arraysEqual)
+                        {
+                            data.currentTiles.Remove(data.tile);
+                            if (data.currentTiles.Count != 0)
+                            {
+                                data.tile = data.currentTiles[Random.Range(0, data.currentTiles.Count)];
+                            }
+                            continue;
+                        }
+                    }
                 }
                 break;
-            }
+            }*/
+
             CheckSuperPositionNeighbours(currentSuperObj);
             closedSuperPositionObjs.Add(currentSuperObj);
             openSuperPositionObjs.Remove(currentSuperObj);
@@ -777,7 +857,7 @@ public class WaveFunctionCollapse : MonoBehaviour
                 }
             }
             lastSuperObj = currentSuperObj;
-            yield return new WaitForSeconds(1 / Mathf.Clamp(speedValue.value, 0.01f, 1f) / 100);
+            yield return new WaitForSeconds(1 / Mathf.Clamp(speedValue.value, 0.001f, 1f) / 1000);
         }
         if (!isQuickSolved)
         {

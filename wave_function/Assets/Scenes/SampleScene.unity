@@ -380,16 +380,16 @@ MonoBehaviour:
       posX: 010000000200000001000000
       negX: 000000000000000000000000
       posY: 000000000100000001000000
-      negY: 000000000100000001000000
-    asimetrik: 1
+      negY: 010000000100000000000000
+    asimetrik: 0
   - tileSprite: {fileID: 21300000, guid: 9539f9345c0eb524abe9667fe6759070, type: 3}
     rotation: 0
     sockets:
       posX: 010000000100000001000000
-      negX: 000000000100000001000000
+      negX: 010000000100000000000000
       posY: 000000000100000001000000
       negY: 010000000100000001000000
-    asimetrik: 1
+    asimetrik: 0
   - tileSprite: {fileID: 21300000, guid: 4e5fe05abdb9e054fb36bded07dea2d2, type: 3}
     rotation: 0
     sockets:
@@ -446,54 +446,6 @@ MonoBehaviour:
       posY: 010000000100000001000000
       negY: 010000000100000001000000
     asimetrik: 0
-  - tileSprite: {fileID: 21300000, guid: 9539f9345c0eb524abe9667fe6759070, type: 3}
-    rotation: 1
-    sockets:
-      posX: 000000000100000001000000
-      negX: 010000000100000001000000
-      posY: 010000000100000000000000
-      negY: 010000000100000001000000
-    asimetrik: 1
-  - tileSprite: {fileID: 21300000, guid: 9539f9345c0eb524abe9667fe6759070, type: 3}
-    rotation: 2
-    sockets:
-      posX: 010000000100000000000000
-      negX: 010000000100000001000000
-      posY: 010000000100000001000000
-      negY: 010000000100000000000000
-    asimetrik: 1
-  - tileSprite: {fileID: 21300000, guid: 9539f9345c0eb524abe9667fe6759070, type: 3}
-    rotation: 3
-    sockets:
-      posX: 010000000100000001000000
-      negX: 010000000100000000000000
-      posY: 010000000100000001000000
-      negY: 000000000100000001000000
-    asimetrik: 1
-  - tileSprite: {fileID: 21300000, guid: 02de256a43c18cd40b2e3e3bfd3c0095, type: 3}
-    rotation: 1
-    sockets:
-      posX: 000000000100000001000000
-      negX: 000000000100000001000000
-      posY: 000000000000000000000000
-      negY: 010000000200000001000000
-    asimetrik: 1
-  - tileSprite: {fileID: 21300000, guid: 02de256a43c18cd40b2e3e3bfd3c0095, type: 3}
-    rotation: 2
-    sockets:
-      posX: 000000000000000000000000
-      negX: 010000000200000001000000
-      posY: 010000000100000000000000
-      negY: 010000000100000000000000
-    asimetrik: 1
-  - tileSprite: {fileID: 21300000, guid: 02de256a43c18cd40b2e3e3bfd3c0095, type: 3}
-    rotation: 3
-    sockets:
-      posX: 010000000100000000000000
-      negX: 010000000100000000000000
-      posY: 010000000200000001000000
-      negY: 000000000000000000000000
-    asimetrik: 1
   gridSize: 4
   canvas: {fileID: 1549688367}
   value: {fileID: 1759717191}
